@@ -7,7 +7,7 @@ module.exports = {
     module: {
         rules: [
             {
-                 // if the files don't pass this test webpack won't do anything with them
+                // if the files don't pass this test webpack won't do anything with them
                 // in this case, a file needs to have the '.ts' ending
                 test: /\.ts$/,
                 // if it passes we will use ts-loader on the file
