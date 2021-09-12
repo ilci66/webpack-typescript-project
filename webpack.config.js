@@ -18,17 +18,22 @@ module.exports = {
                 use: 'ts-loader',
             }
         ]
-    },
+    }, 
+    devServer: {
+        static: './public',
+      },
     output: {
+        // what do you wanna call the js file that will appear in public folder
+        filename: 'bundle.js',
+        // the path here needs to be an absolute path, use the path module
+        path: path.resolve(__dirname, 'public') ,
         // where should webpack-dev-server serve the files to from memory, it will be relative path
         // We are specifiying the path to the folder where the real js file is being served from
         // after these changes, webpack-dev-server will recompile the code and serve it from this 
         // file without me needing to run build agan and again 
         // webpack-dev-server recompiles but doesn't rebuild don't forget
-        publicPath: 'public', 
-        // what do you wanna call the js file that will appear in public folder
-        filename: 'bundle.js',
-        // the path here needs to be an absolute path, use the path module
-        path: path.resolve(__dirname, 'public') 
+        // publicPath: '/public', 
+        // changing into this to fix the problem (wasn't showing changes in browser)
+        publicPath: '/', 
     },
 };
