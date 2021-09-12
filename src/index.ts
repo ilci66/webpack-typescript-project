@@ -9,4 +9,3 @@ form.addEventListener('submit', (e) => {
   // to see if it works properly
   console.log(data);
 });
-console.log('yee')
