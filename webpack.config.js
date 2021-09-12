@@ -18,10 +18,14 @@ module.exports = {
                 use: 'ts-loader',
             }
         ]
-    }, 
-    devServer: {
-        static: './public',
-      },
+    },
+    // doesn't seem necessary for now  
+    // devServer: {
+    //     static: './public',
+    //   },
+    resolve:{
+        extensions: ['.ts', '.js'],
+    },
     output: {
         // what do you wanna call the js file that will appear in public folder
         filename: 'bundle.js',
