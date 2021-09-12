@@ -1,6 +1,9 @@
 const path = require('path');
 
 module.exports = {
+    // this probably is being used already because of the mode setting, but still adding it learn  
+    // there are other source maps that I can use apparentşy but for now going with this one
+    devtool: "eval-source-map",
     // To get rid of that annoying error 
     mode: 'development',
     // this needs to be a relative path, telling file what to compile
